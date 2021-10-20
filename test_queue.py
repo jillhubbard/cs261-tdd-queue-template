@@ -27,7 +27,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_initial_size(self):
     #     """
-    #     A queue is size is initially zero
+    #     A queue size is initially zero
     #     """
     #     q = Queue()
     #     self.assertEqual(0,q.items)
