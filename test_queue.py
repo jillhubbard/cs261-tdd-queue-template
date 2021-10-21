@@ -240,17 +240,6 @@ class TestQueue(unittest.TestCase):
     #     q.dequeue()
     #     self.assertEqual(0, q.size())
 
-    # def test_dequeue_from_an_empty_queue(self):  
-    #     """
-    #     Dequeueing from an empty queue raises an exception
-    #     """
-    #     q = Queue()
-    #     try:
-    #         q.dequeue()
-    #         self.fail("Did not raise an Exception")
-    #     except Exception:
-    #         self.assertEqual(0, q.size())
-
     # """
     # Algorithmic complexity
     # """
