@@ -8,7 +8,9 @@ from queue import Queue
 # Hint: Once test_has_linked_list_internal passes, uncomment this line.
 # Refer to https://ajakubek.github.io/python-llist/index.html for sllist documentation
 #from llist import sllist
-
+# or is you're having trouble with llist
+#from pyllist import sllist
+# Refer to https://github.com/rgsoda/pypy-llist/ for sllist documentation
 
 class TestQueue(unittest.TestCase):
 
@@ -18,7 +20,7 @@ class TestQueue(unittest.TestCase):
 
     def test_instantiation(self):
         """
-        A Queue exists.
+        Test 1: A Queue exists.
         """
         try:
             Queue()
@@ -27,7 +29,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_initial_size(self):
     #     """
-    #     A queue size is initially zero
+    #     Test 2: A queue size is initially zero
     #     """
     #     q = Queue()
     #     self.assertEqual(0,q.items)
@@ -38,7 +40,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_has_linked_list_internal(self):
     #     """
-    #     A queue has a data member, which is an sllist.
+    #     Test 3: A queue has a data member, which is an sllist.
     #     """
     #     from llist import sllist # Hint: pip3 install llist
     #     q = Queue()
@@ -49,7 +51,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_enqueue_one_internal(self):
     #     """
-    #     Enqueueing a value adds it to the internal sllist.
+    #     Test 4: Enqueueing a value adds it to the internal sllist.
     #     """
     #     q = Queue()
     #     q.enqueue('fee')
@@ -57,7 +59,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_enqueue_two_internal(self):
     #     """
-    #     Enqueueing two values results in the first enqueued value being the first
+    #     Test 5: Enqueueing two values results in the first enqueued value being the first
     #     one in the list, and the second value being the last one in the list.
     #     """
     #     q = Queue()
@@ -68,7 +70,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_enqueue_three_internal(self):
     #     """
-    #     Enqueueing three values results in the first enqueued value being the first
+    #     Test 6: Enqueueing three values results in the first enqueued value being the first
     #     one in the list, and the third value being the last one in the list.
     #     """
     #     q = Queue()
@@ -80,7 +82,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_dequeue_one(self):
     #     """
-    #     Dequeuing from a single-element queue returns the single value.
+    #     Test 7: Dequeuing from a single-element queue returns the single value.
     #     """
     #     q = Queue()
     #     q.enqueue('fee')
@@ -88,7 +90,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_dequeue_one_internal(self):
     #     """
-    #     Dequeuing from a single-element queue removes it from the internal sllist.
+    #     Test 8: Dequeuing from a single-element queue removes it from the internal sllist.
     #     """
     #     q = Queue()
     #     q.enqueue('fee')
@@ -98,7 +100,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_dequeue_two(self):
     #     """
-    #     Dequeuing from a two-element queue returns the first enqueued value.
+    #     Test 9: Dequeuing from a two-element queue returns the first enqueued value.
     #     """
     #     q = Queue()
     #     q.enqueue('fee')
@@ -107,7 +109,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_dequeue_two_internal(self):
     #     """
-    #     Dequeuing from a two-element queue removes the first enqueued value from
+    #     Test 10: Dequeuing from a two-element queue removes the first enqueued value from
     #     the sllist.
     #     """
     #     q = Queue()
@@ -118,7 +120,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_dequeue_three(self):
     #     """
-    #     Dequeuing from a three-element queue returns each enqueued value in FIFO
+    #     Test 11: Dequeuing from a three-element queue returns each enqueued value in FIFO
     #     order.
     #     """
     #     q = Queue()
@@ -131,7 +133,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_dequeue_three_internal(self):
     #     """
-    #     Dequeuing from a three-element queue removes each dequeued value from
+    #     Test 12: Dequeuing from a three-element queue removes each dequeued value from
     #     the internal sllist, in FIFO order.
     #     """
     #     q = Queue()
@@ -150,14 +152,14 @@ class TestQueue(unittest.TestCase):
 
     # def test_empty(self):
     #     """
-    #     A queue is initially empty.
+    #     Test 13: A queue is initially empty.
     #     """
     #     q = Queue()
     #     self.assertTrue(q.is_empty())
 
     # def test_not_empty(self):
     #     """
-    #     A queue with one enqueued value is not empty.
+    #     Test 14: A queue with one enqueued value is not empty.
     #     """
     #     q = Queue()
     #     q.enqueue('fee')
@@ -165,7 +167,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_empty_after_dequeue(self):
     #     """
-    #     A queue with one enqueued value is empty after dequeuing.
+    #     Test 15: A queue with one enqueued value is empty after dequeuing.
     #     """
     #     q = Queue()
     #     q.enqueue('fee')
@@ -174,7 +176,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_not_empty_multiple(self):
     #     """
-    #     A queue with two enqueued values is not empty after dequeuing only one.
+    #     Test 16: A queue with two enqueued values is not empty after dequeuing only one.
     #     """
     #     q = Queue()
     #     q.enqueue('fee')
@@ -189,7 +191,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_size0(self):
     #     """
-    #     A queue is initially empty.
+    #     Test 17: A queue is initially empty.
     #     """
     #     q = Queue()
     #     self.assertTrue(q.is_empty())
@@ -197,7 +199,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_dequeue_from_an_empty_queue(self):  
     #     """
-    #     Dequeueing from an empty queue raises ValueError. The size of the queue 
+    #     Test 18: Dequeueing from an empty queue raises ValueError. The size of the queue 
     #     remains 0
     #     """
     #     q = Queue()
@@ -209,7 +211,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_size_after_enqueues(self):
     #     """
-    #     Enqueueing a values increases the number of items in the queue.
+    #     Test 19: Enqueueing a values increases the number of items in the queue.
     #     """
     #     q = Queue()
     #     q.enqueue('fee')
@@ -223,7 +225,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_size_after_dequeues(self):  
     #     """
-    #     Dequeueing a values increases the number of items in the queue.
+    #     Test 20: Dequeueing a values increases the number of items in the queue.
     #     """
     #     q = Queue()
     #     q.enqueue('fee')
@@ -246,7 +248,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_enqueue_efficiency(self):
     #     """
-    #     Enqueing a value is always O(1).
+    #     Test 21: Enqueing a value is always O(1).
     #     """
     #     time_samples = []
     #     for _ in range(0, 1000):
@@ -271,7 +273,7 @@ class TestQueue(unittest.TestCase):
 
     # def test_dequeue_efficiency(self):
     #     """
-    #     Dequeuing a value is always O(1).
+    #     Test 22: Dequeuing a value is always O(1).
     #     """
     #     time_samples = []
     #     for _ in range(0, 1000):
